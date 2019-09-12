@@ -12,6 +12,8 @@ router.get('/', (req, res) => {
     if(req.isAuthenticated()) {
         pool.query(queryText)
         .then((response) => {
+            console.log(response);
+            
             res.send(response.rows);
         })
         .catch((err) => {
@@ -28,7 +30,7 @@ router.get('/', (req, res) => {
  * Add an item for the logged in user to the shelf
  */
 router.post('/', (req, res) => {
-    
+
 
 });
 
